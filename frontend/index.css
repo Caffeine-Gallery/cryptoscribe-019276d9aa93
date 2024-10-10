@@ -19,6 +19,11 @@ h1 {
     margin: 0;
 }
 
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
 button {
     background-color: #1a8917;
     color: white;
@@ -63,6 +68,11 @@ button:hover {
     margin-top: 0;
 }
 
+.post h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .post .author {
     font-style: italic;
     color: #666;
@@ -79,4 +89,16 @@ button:hover {
 
 .ql-editor {
     min-height: 200px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1a8917;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
 }

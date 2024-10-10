@@ -3,13 +3,15 @@ import type { ActorMethod } from '@dfinity/agent';
 import type { IDL } from '@dfinity/candid';
 
 export interface Post {
+  'id' : bigint,
   'title' : string,
   'body' : string,
   'author' : string,
   'timestamp' : bigint,
 }
 export interface _SERVICE {
-  'addPost' : ActorMethod<[string, string, string], undefined>,
+  'addPost' : ActorMethod<[string, string, string], bigint>,
+  'getPost' : ActorMethod<[bigint], [] | [Post]>,
   'getPosts' : ActorMethod<[], Array<Post>>,
 }
 export declare const idlFactory: IDL.InterfaceFactory;
